@@ -54,6 +54,7 @@ public class Time {
     }
 
     public int advanceTime(int sec){
+        //i didnt get to ask about the functionality for this one, sorry sir :(
         return sec;
     }
 
