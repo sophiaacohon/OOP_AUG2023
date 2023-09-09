@@ -55,6 +55,10 @@ public class Time {
 
     public int advanceTime(int sec){
         //i didnt get to ask about the functionality for this one, sorry sir :(
+        int hrToMin = this.hour * 60;
+        int minToSec = hrToMin * 60;
+        sec = minToSec;
+        System.out.println("Time in seconds: " + sec);
         return sec;
     }
 
@@ -117,13 +121,13 @@ public class Time {
             this.hour -= 12;
             System.out.println("12 Hour Format: " + this.hour + ":" + this.minute + ":" + this.second + "PM");
         }
-        else if(this.meridian == true){
-            System.out.println("12 Hour Format: " + this.hour + ":" + this.minute + ":" + this.second + "PM");
-        }
         else if(this.hour == 0){
             this.meridian = false;
             this.hour += 12;
             System.out.println("12 Hour Format: " + this.hour + ":" + this.minute + ":" + this.second + "AM");
+        }
+        else if(this.meridian == true){
+            System.out.println("12 Hour Format: " + this.hour + ":" + this.minute + ":" + this.second + "PM");
         }
         else if(this.meridian == false && (this.hour < 12 && this.hour > 0)){
             System.out.println("12 Hour Format: " + this.hour + ":" + this.minute + ":" + this.second + "AM");
@@ -167,8 +171,8 @@ public class Time {
     }
 
     public static void main(String[] args) {
-        Time myTime = new Time(11, 59, 59, false);
-        System.out.print(myTime.meridian);
+        Time myTime = new Time(3, 56, 59, true);
+        System.out.print(myTime);
         if(myTime.meridian == true){
             System.out.println(" PM");
         }
@@ -180,7 +184,16 @@ public class Time {
         myTime.display12Hour();
         myTime.display24Hour();
         myTime.tickByMinute();
+        myTime.display12Hour();
+        myTime.display24Hour();
         myTime.tickByHour();
-
+        myTime.display12Hour();
+        myTime.display24Hour();
+        myTime.tickByMinute();
+        myTime.display12Hour();
+        myTime.display24Hour();
+        myTime.tickByMinute();
+        myTime.display12Hour();
+        myTime.display24Hour();
     }
 }
