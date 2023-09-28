@@ -8,6 +8,6 @@ package employee.version5;
  *
  * @author Sophia
  */
-public class BasePlusCommissionEmployee {
+public class BasePlusCommissionEmployee extends CommissionEmployee{
     
 }

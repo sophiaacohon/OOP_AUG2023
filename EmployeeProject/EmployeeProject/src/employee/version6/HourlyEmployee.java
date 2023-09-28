@@ -8,6 +8,6 @@ package employee.version6;
  *
  * @author Sophia
  */
-public class HourlyEmployee {
+public class HourlyEmployee extends Employee{
     
 }
