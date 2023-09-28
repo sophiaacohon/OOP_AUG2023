@@ -49,9 +49,10 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
         this.baseSalary = baseSalary;
     }
 
-    public double computeBSalary(){
+    @Override
+    public double computeSalary(){
         double bpceSalary;
-        bpceSalary = super.computeCSalary() + this.baseSalary;
+        bpceSalary = super.computeSalary() + this.baseSalary;
         return bpceSalary;
     }
 
@@ -59,7 +60,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
         System.out.println("\nBase Plus Commission Employee Information: ");
         super.displayInfo();
         System.out.println("Base Salary: PHP " + this.baseSalary);
-        System.out.println("Total Salary from Commission Plus Base Salary: PHP " + this.computeBSalary());
+        System.out.println("Total Salary from Commission Plus Base Salary: PHP " + this.computeSalary());
     }
 
     @Override

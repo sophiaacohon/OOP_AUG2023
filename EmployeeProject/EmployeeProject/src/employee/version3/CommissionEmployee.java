@@ -42,7 +42,7 @@ public class CommissionEmployee extends Employee{
         this.totalSales = totalSales;
     }
 
-    public double computeCSalary(){
+    public double computeSalary(){
         double totalCSalary = 0;
         if(this.totalSales < 50000){
             System.out.println("Commission Rate: 5%");
@@ -68,7 +68,7 @@ public class CommissionEmployee extends Employee{
         System.out.println("Commission Employee Information: ");
         super.displayInfo();
         System.out.println("Total Sales: PHP " + this.totalSales);
-        System.out.println("Total Salary from Commission: PHP " + this.computeCSalary());
+        System.out.println("Total Salary from Commission: PHP " + this.computeSalary());
     }
 
     @Override
